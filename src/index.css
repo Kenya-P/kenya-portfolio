@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Make `dark:` depend on the `.dark` class (not OS theme) */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
