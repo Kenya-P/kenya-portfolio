@@ -23,7 +23,7 @@ export default function Shell() {
   );
 
   return (
-    <div className="min-h-screen bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+    <div className="min-h-screen bg-white text-slate-900 dark:bg-black dark:text-white">
       <LandingOverlay name={profile.name} tagline={profile.tagline} />
 
       <Navbar links={profile.nav} />
