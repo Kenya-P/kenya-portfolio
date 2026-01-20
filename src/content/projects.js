@@ -5,7 +5,7 @@ export default [
     type: "Full-Stack App",
     featured: true,
     oneLiner: "Pet adoption platform with filtering, favorites, and user accounts.",
-    liveUrl: "https://your-live-demo.com",
+    liveUrl: "https://kenya-p.github.io/Final_Project/",
     repoUrl: "https://github.com/Kenya-P/Final_Project",
     stack: ["React", "Vite", "Node", "Express", "MongoDB", "JWT", "Figma"],
     highlights: [
@@ -24,7 +24,7 @@ export default [
     type: "React App",
     featured: true,
     oneLiner: "Weather-driven clothing recommendations with saved items and responsive UI.",
-    liveUrl: "https://your-live-demo.com",
+    liveUrl: "https://wtwr-kenya.crabdance.com/",
     repoUrl: "https://github.com/Kenya-P/se_project_react",
     stack: ["React", "Context API", "REST", "Responsive CSS"],
     highlights: [

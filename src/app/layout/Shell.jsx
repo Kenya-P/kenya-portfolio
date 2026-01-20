@@ -31,33 +31,41 @@ export default function Shell() {
         <ThemeToggle />
       </div>
 
-      {/* HERO */}
-      <Section id="top" className="pt-24">
-        <Container>
-          <div className="grid gap-10 lg:grid-cols-12 lg:gap-12 items-start">
-            <div className="lg:col-span-7">
-              <p className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-sm text-slate-700 shadow-sm dark:border-slate-800 dark:bg-slate-950 dark:text-slate-200">
-                {profile.badge}
-              </p>
+    {/* HERO */}
+    <Section id="top" className="pt-28 md:pt-32">
+      <Container>
+        <div className="grid items-start gap-12 lg:grid-cols-12 lg:gap-14">
+          <div className="lg:col-span-7">
+            {/* Badge */}
+            <p className="inline-flex items-center gap-2 rounded-full border border-slate-200/80 bg-white/70 px-4 py-1.5 text-sm font-medium text-slate-700 shadow-sm backdrop-blur dark:border-slate-800/70 dark:bg-slate-950/40 dark:text-slate-200">
+              {profile.badge}
+            </p>
 
-              <h1 className="mt-5 text-4xl font-semibold leading-tight tracking-tight md:text-5xl">
+            {/* Headline */}
+            <h1 className="mt-6 text-5xl font-semibold leading-[1.02] tracking-[-0.03em] sm:text-6xl">
+              <span className="block text-slate-950 dark:text-white">
                 {profile.name}
-                <span className="block text-slate-600 dark:text-slate-300">
-                  {profile.role}
-                </span>
-              </h1>
+              </span>
+              <span className="mt-2 block text-slate-600 dark:text-slate-300">
+                {profile.role}
+              </span>
+            </h1>
 
-              <p className="mt-4 max-w-2xl text-lg text-slate-600 dark:text-slate-300">
-                {profile.summary}
-              </p>
+            {/* Summary */}
+            <p className="mt-6 max-w-[60ch] text-lg leading-relaxed text-slate-600 dark:text-slate-300 sm:text-xl">
+              {profile.summary}
+            </p>
 
-              <div className="mt-7 flex flex-wrap gap-3">
-                <Button href="#projects" variant="primary">
-                  View Projects
-                </Button>
-                <Button href={profile.resumeUrl} variant="secondary" external>
-                  Download Resume
-                </Button>
+            {/* CTA row */}
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+              <Button href="#projects" variant="primary">
+                View Projects
+              </Button>
+              <Button href={profile.resumeUrl} variant="secondary" external>
+                Download Resume
+              </Button>
+
+              <div className="flex gap-3 sm:ml-2">
                 <Button href={profile.githubUrl} variant="ghost" external>
                   GitHub
                 </Button>
@@ -65,56 +73,64 @@ export default function Shell() {
                   LinkedIn
                 </Button>
               </div>
-
-              <div className="mt-8 grid gap-3 sm:grid-cols-2">
-                {profile.highlights.map((h) => (
-                  <div
-                    key={h.title}
-                    className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-950"
-                  >
-                    <p className="text-sm font-medium">{h.title}</p>
-                    <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
-                      {h.text}
-                    </p>
-                  </div>
-                ))}
-              </div>
             </div>
 
-            {/* Right column: “premium” card */}
-            <div className="lg:col-span-5">
-              <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft dark:border-slate-800 dark:bg-slate-950">
-                <p className="text-sm font-medium text-slate-700 dark:text-slate-200">
-                  Tech Focus
-                </p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {profile.tech.map((t) => (
-                    <span
-                      key={t}
-                      className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm text-slate-700 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-200"
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
-
-                <div className="mt-6 rounded-2xl bg-slate-50 p-5 dark:bg-slate-900">
-                  <p className="text-sm font-medium">Currently building</p>
-                  <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
-                    {profile.current}
+            {/* Proof chips */}
+            <div className="mt-10 grid gap-4 sm:grid-cols-2">
+              {profile.highlights.map((h) => (
+                <div
+                  key={h.title}
+                  className="rounded-2xl border border-slate-200/80 bg-white/70 p-5 shadow-sm backdrop-blur dark:border-slate-800/70 dark:bg-slate-950/40"
+                >
+                  <p className="text-sm font-semibold tracking-tight text-slate-900 dark:text-slate-100">
+                    {h.title}
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+                    {h.text}
                   </p>
                 </div>
+              ))}
+            </div>
+          </div>
 
-                <div className="mt-6">
-                  <Button href="#contact" variant="primary" full>
-                    Contact Me
-                  </Button>
-                </div>
+          {/* Right column: “Tech Focus” card */}
+          <div className="lg:col-span-5">
+            <div className="rounded-3xl border border-slate-200/80 bg-white/70 p-6 shadow-soft backdrop-blur dark:border-slate-800/70 dark:bg-slate-950/40">
+              <p className="text-sm font-semibold text-slate-900 dark:text-slate-100">
+                Tech Focus
+              </p>
+
+              <div className="mt-4 flex flex-wrap gap-2">
+                {profile.tech.map((t) => (
+                  <span
+                    key={t}
+                    className="rounded-full border border-slate-200/80 bg-slate-50/80 px-3 py-1 text-sm text-slate-700 dark:border-slate-800/70 dark:bg-slate-900/60 dark:text-slate-200"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+
+              <div className="mt-6 rounded-2xl bg-slate-50/80 p-5 dark:bg-slate-900/60">
+                <p className="text-sm font-semibold text-slate-900 dark:text-slate-100">
+                  Currently building
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+                  {profile.current}
+                </p>
+              </div>
+
+              <div className="mt-6">
+                <Button href="#contact" variant="primary" full>
+                  Contact Me
+                </Button>
               </div>
             </div>
           </div>
-        </Container>
-      </Section>
+        </div>
+      </Container>
+    </Section>
+
 
       {/* PROJECTS */}
       <Section id="projects">
