@@ -1,11 +1,35 @@
 export default [
   {
+    slug: "appbuddy-copilot",
+    title: "AppBuddy Copilot",
+    type: "Full-Stack AI App",
+    featured: true,
+    status: "Code available · Case study included · Live demo unavailable",
+    oneLiner:
+      "AI-powered application assistant that helps users generate tailored cover letters, profile responses, and job-specific drafts.",
+    liveUrl: "",
+    repoUrl: "https://github.com/Kenya-P/AppBuddy-copilot",
+    stack: ["React", "Node.js", "Express", "MongoDB", "JWT", "OpenAI API"],
+    highlights: [
+      "Built protected authentication flows using JWT and persisted user sessions.",
+      "Integrated OpenAI-powered generation for cover letters and application responses.",
+      "Designed resume parsing, profile completion, saved drafts, and gap analysis features.",
+    ],
+    caseStudy: {
+      problem:
+        "Job seekers often repeat the same information across applications and need help tailoring responses quickly.",
+      solution:
+        "Built a full-stack AI assistant that stores reusable profile data and generates job-specific application materials.",
+    },
+  },
+  {
     slug: "perfect-pet-finder",
     title: "Perfect Pet Finder",
     type: "Full-Stack App",
     featured: true,
     oneLiner: "Pet adoption platform with filtering, favorites, and user accounts.",
-    liveUrl: "https://kenya-p.github.io/Final_Project/",
+    liveUrl: "",
+    status: "Code available | Case study included | Live demo unavailable",
     repoUrl: "https://github.com/Kenya-P/Final_Project",
     stack: ["React", "Vite", "Node", "Express", "MongoDB", "JWT", "Figma"],
     highlights: [

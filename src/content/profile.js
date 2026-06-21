@@ -4,7 +4,7 @@ export default {
   tagline: "Full-stack projects + design-first UI",
   badge: "Open to SWE roles • React • Node • MongoDB",
   email: "kenyap013@gmail.com",
-  resumeUrl: `${import.meta.env.BASE_URL}Kenya_Peterson-Resume.pdf`,
+  resumeUrl: `${import.meta.env.BASE_URL}Kenya_Peterson_Resume.pdf`,
   githubUrl: "https://github.com/Kenya-P",
   linkedinUrl: "https://www.linkedin.com/in/kenya-peterson-558750230/",
 

@@ -40,9 +40,15 @@ export default function ProjectCard({ project, onOpen }) {
       </ul>
 
       <div className="mt-6 flex flex-wrap gap-3">
-        <Button href={project.liveUrl} variant="primary" external>
-          Live
-        </Button>
+        {project.liveUrl ? (
+          <Button href={project.liveUrl} variant="primary" external>
+            Live Demo
+          </Button>
+        ) : (
+          <Button onClick={onOpen} variant="primary">
+            Case Study
+          </Button>
+        )}
         <Button href={project.repoUrl} variant="secondary" external>
           Code
         </Button>
